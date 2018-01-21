@@ -103,7 +103,7 @@ function processImage(img) {
 function updateUiCounter() {
   black.percent = (black.lastPixelIndex / black.arr.length) * 100;
   white.percent = (white.lastPixelIndex / white.arr.length) * 100;
-  var msg = 'orange: ' + black.percent.toFixed(1) + '% , ' + 'blue: ' + white.percent.toFixed(1) + '%';
+  var msg = 'Orange: ' + black.percent.toFixed(1) + '% | ' + 'Blue: ' + white.percent.toFixed(1) + '%';
   var counterDiv = document.getElementById('counter');
   counterDiv.innerText = msg;
 }
