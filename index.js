@@ -5,9 +5,9 @@ var whiteThreshold = 0.009;
 var blackThreshold = 0.1;
 
 //RGB color of black pixels
-var black_rgb = [255, 128, 0];
+var black_rgb = [0, 0, 255];
 //RGB color of shite pixels
-var white_rgb = [0, 0, 255];
+var white_rgb = [255, 128, 0];
 
 
 //General object representation of pixels
