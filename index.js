@@ -4,9 +4,9 @@ var bar_width = 20;
 var whiteThreshold = 0.009;
 var blackThreshold = 0.1;
 
-//RGB color of black pixels
+//RGB colour of black pixels
 var black_rgb = [0, 0, 255];
-//RGB color of shite pixels
+//RGB colour of shite pixels
 var white_rgb = [255, 128, 0];
 
 
@@ -16,7 +16,7 @@ var Pixels = function (rgba, nextRgba, originalRgba, spread) {
   this.nextRgba = nextRgba;
   this.originalRgba = originalRgba;
   this.spread = spread;
-  this.colorFlag = false;
+  this.colourFlag = false;
   this.arr = [];
   this.rgba = false;
   this.lastPixelIndex = 0;
@@ -31,11 +31,11 @@ var Pixels = function (rgba, nextRgba, originalRgba, spread) {
     }
     return result;
   };
-  this.flipColor = function (pixels) {
+  this.flipColour = function (pixels) {
     this.arr = shuffleArr(this.arr);
     this.lastPixelIndex = 0;
     this.percent = 0;
-    this.colorFlag = !this.colorFlag;
+    this.colourFlag = !this.colourFlag;
     this.rgba  = this.nextRgba;
   };
   this.calculatePixelSpread = function(volume){
@@ -112,9 +112,9 @@ function updateUiCounter() {
 function drawPixels(pixels, volume) {
   noStroke();
   if (pixels.isFinished()) {
-    pixels.flipColor();
+    pixels.flipColour();
   } else {
-    if (!pixels.colorFlag) {
+    if (!pixels.colourFlag) {
       pixels.rgba = pixels.originalRgba;
     }
   }
